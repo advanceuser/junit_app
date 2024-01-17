@@ -19,7 +19,7 @@ class CuentaTest {
     @BeforeEach
     void initMetodoTest() {
         System.out.println("Iniciando el metodo");
-        this.cuenta = new Cuenta("Mariana Sarabia", new BigDecimal("1000.12345"));
+        this.cuenta = new Cuenta("Mario Hernandez", new BigDecimal("1000.12345"));
 
     }
 
@@ -41,11 +41,11 @@ class CuentaTest {
     @Test
     @DisplayName("Probando el nombre de la cuenta")
     void testNombreCuenta() {
-        String esperado = "Mariana Sarabia";
+        String esperado = "Mario Hernandez";
         String real = cuenta.getPersona();
         assertNotNull(real, () -> "La cuenta no puede ser nula");
         assertEquals(esperado, real, () -> "El nombre de la cuenta no es el esperado: se esperaba " + esperado + " sin embargo fue: " + real);
-        assertTrue(real.equals("Mariana Sarabia"), () -> "Nombre cuenta esperada debe ser igual a la real");
+        assertTrue(real.equals("Mario Hernandez"), () -> "Nombre cuenta esperada debe ser igual a la real");
     }
 
     @Test
